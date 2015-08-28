@@ -9,7 +9,7 @@ main_page_head = '''
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Fresh Tomatoes!</title>
+    <title>Brian's Favorite Movies</title>
 
     <!-- Bootstrap 3 -->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
@@ -42,6 +42,9 @@ main_page_head = '''
         .movie-tile:hover {
             background-color: #EEE;
             cursor: pointer;
+        }
+        .movie-tile .thumbnail {
+            min-height: 530px;
         }
         .scale-media {
             padding-bottom: 56.25%;
@@ -107,7 +110,7 @@ main_page_content = '''
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#">Fresh Tomatoes Movie Trailers</a>
+            <a class="navbar-brand" href="#">Brian's Favorite Movies</a>
           </div>
         </div>
       </div>
@@ -123,8 +126,13 @@ main_page_content = '''
 # A single movie entry html template
 movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
-    <img src="{poster_image_url}" width="220" height="342">
-    <h2>{movie_title}</h2>
+    <div class="thumbnail">
+        <img src="{poster_image_url}" width="220" height="342">
+        <h4>{movie_title} <small>({release_year})</small></h4>
+        <p>{storyline}</p>
+        <small>{movie_length}</small>
+        <small>{movie_rated}</small>
+    </div>
 </div>
 '''
 
@@ -145,7 +153,11 @@ def create_movie_tiles_content(movies):
         content += movie_tile_content.format(
             movie_title=movie.title,
             poster_image_url=movie.poster_image_url,
-            trailer_youtube_id=trailer_youtube_id
+            trailer_youtube_id=trailer_youtube_id,
+            storyline=movie.storyline,
+            release_year=movie.release_year,
+            movie_length=movie.length,
+            movie_rated=movie.rated
         )
     return content
 
