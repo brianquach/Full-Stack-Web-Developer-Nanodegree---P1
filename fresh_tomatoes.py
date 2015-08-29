@@ -19,6 +19,7 @@ main_page_head = '''
     <style type="text/css" media="screen">
         body {
             padding-top: 80px;
+            background-color: #eee;
         }
         #trailer .modal-dialog {
             margin-top: 200px;
@@ -46,6 +47,9 @@ main_page_head = '''
         .movie-tile .thumbnail {
             min-height: 530px;
         }
+        .movie-tile .thumbnail:hover {
+            box-shadow: 0 0 4px #00bfff;
+        }
         .scale-media {
             padding-bottom: 56.25%;
             position: relative;
@@ -58,6 +62,13 @@ main_page_head = '''
             left: 0;
             top: 0;
             background-color: white;
+        }
+        .navbar-brand {
+            color: #00bfff !important;
+        }
+        .navbar-brand:hover {
+            text-shadow: 0 0 4px #00bfff;
+            color: #00bfff !important;
         }
     </style>
     <script type="text/javascript" charset="utf-8">
@@ -130,14 +141,21 @@ movie_tile_content = '''
         <img src="{poster_image_url}" width="220" height="342">
         <h4>{movie_title} <small>({release_year})</small></h4>
         <p>{storyline}</p>
-        <small>{movie_length}</small>
-        <small>{movie_rated}</small>
+        <small>{movie_length} &centerdot; {movie_rated}</small>
     </div>
 </div>
 '''
 
 
 def create_movie_tiles_content(movies):
+    """Creates the HTML markup for each movie object in movies to be rendered by the browser.
+
+    Args:
+        movies: A list of movie objects.
+
+    Returns:
+        A string representing HTML markup for each movie object in movies.
+    """
     # The HTML content for this section of the page
     content = ''
     for movie in movies:
@@ -163,6 +181,14 @@ def create_movie_tiles_content(movies):
 
 
 def open_movies_page(movies):
+    """Outputs concatenated HTML strings to an HTML file to be opened by the browser representing Brian's favorite movies.
+
+    Args:
+        movies: A list of movie objects.
+
+    Returns:
+        None
+    """
     # Create or overwrite the output file
     output_file = open('fresh_tomatoes.html', 'w')
 
