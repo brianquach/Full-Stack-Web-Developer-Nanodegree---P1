@@ -23,4 +23,4 @@ Brian Quach
 
 ## Copyright and license
 
-Code and documentation copyright 2015 Brian Quach. Code released under [the MIT license](https://github.com/brianquach/Full-Stack-Web-Developer-Nanodegree---P1/blob/master/LICENSE).
+Code copyright 2015 Brian Quach. Code released under [the MIT license](https://github.com/brianquach/Full-Stack-Web-Developer-Nanodegree---P1/blob/master/LICENSE).
