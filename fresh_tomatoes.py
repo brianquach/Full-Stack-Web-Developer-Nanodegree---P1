@@ -1,3 +1,7 @@
+"""
+The original author of this code is Udacity's Full-Stack Web Developer Nanodegree course.
+Code modified by: Brian Quach (13rianquach@gmail.com)
+"""
 import webbrowser
 import os
 import re
