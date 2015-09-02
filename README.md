@@ -11,7 +11,7 @@ First project for the Full-Stack Web Devloper Nanodegree course; Brian's favorit
 
 In order to install Brian's Favorite Movies application follow these instructions:
 * Download [Python 2.7](https://www.python.org/downloads/) and install it, if you do not already have it.
-* Clone repository: git clone `https://github.com/brianquach/Full-Stack-Web-Developer-Nanodegree---P1.git` or download the zip [here](https://github.com/brianquach/Full-Stack-Web-Developer-Nanodegree---P1).
+* Clone repository: `git clone https://github.com/brianquach/Full-Stack-Web-Developer-Nanodegree---P1.git` or download the zip [here](https://github.com/brianquach/Full-Stack-Web-Developer-Nanodegree---P1).
 * Navigate to the directory where you cloned the repo or unzipped the file to.
 * Run program using `python entertainment_center.py`
 
