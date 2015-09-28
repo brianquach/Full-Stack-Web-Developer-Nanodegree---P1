@@ -1,6 +1,6 @@
 """
 Copyright 2015 Brian Quach
-Licensed under MIT (https://github.com/brianquach/Full-Stack-Web-Developer-Nanodegree---P1/blob/master/LICENSE)  # noqa
+Licensed under MIT (https://github.com/brianquach/udacity-nano-fullstack-movie-trailer/blob/master/LICENSE)  # noqa
 """
 import webbrowser
 
